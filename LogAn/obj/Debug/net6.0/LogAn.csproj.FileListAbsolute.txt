@@ -1,0 +1,12 @@
+C:\Projects\TheArtOfUnitTest\LogAn\bin\Debug\net6.0\LogAn.deps.json
+C:\Projects\TheArtOfUnitTest\LogAn\bin\Debug\net6.0\LogAn.dll
+C:\Projects\TheArtOfUnitTest\LogAn\bin\Debug\net6.0\LogAn.pdb
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\LogAn.csproj.AssemblyReference.cache
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\LogAn.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\LogAn.AssemblyInfoInputs.cache
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\LogAn.AssemblyInfo.cs
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\LogAn.csproj.CoreCompileInputs.cache
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\LogAn.dll
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\refint\LogAn.dll
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\LogAn.pdb
+C:\Projects\TheArtOfUnitTest\LogAn\obj\Debug\net6.0\ref\LogAn.dll
