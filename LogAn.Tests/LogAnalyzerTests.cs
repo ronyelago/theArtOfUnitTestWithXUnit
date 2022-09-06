@@ -50,5 +50,18 @@ namespace LogAn.Tests
             var ex = Assert.Throws<ArgumentException>(() => logAn.IsValidLogFileName(fileName));
             Assert.Equal("filename has to be provided", ex.Message);
         }
+
+        [Fact]
+        public void IsValidFileName_ValidName_RemembersTrue()
+        {
+            //arrange
+            string fileName = "whatever.slf";
+
+            //act
+            logAn.IsValidLogFileName(fileName);
+            
+            //assert
+            Assert.True(logAn.WasLastFileNameValid);
+        }
     }
 }
