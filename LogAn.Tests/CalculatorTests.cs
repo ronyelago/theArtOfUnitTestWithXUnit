@@ -38,5 +38,14 @@ namespace LogAn.Tests
             
             Assert.Equal(twoNumbersSumResult, _calculator.Sum());   
         }
+
+        [Theory]
+        [InlineData(3, 6, 9)]
+        [InlineData(5, 7, 4)]
+        [InlineData(6, 8, 3)]
+        public void Add_AddThreeNumbers_ReturnsExpectedResult(int firstNumber, int secondNumber, int thirdNumber)
+        {
+
+        }
     }
 }
