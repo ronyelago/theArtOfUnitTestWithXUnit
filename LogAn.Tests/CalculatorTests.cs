@@ -29,14 +29,14 @@ namespace LogAn.Tests
         {
             //arrange && act
 
-            var sumResult = firstNumber + secondNumber;
+            var twoNumbersSumResult = firstNumber + secondNumber;
 
             _calculator.Add(firstNumber);
             _calculator.Add(secondNumber);
 
             //assert
             
-            Assert.Equal(sumResult, _calculator.Sum());   
+            Assert.Equal(twoNumbersSumResult, _calculator.Sum());   
         }
     }
 }
