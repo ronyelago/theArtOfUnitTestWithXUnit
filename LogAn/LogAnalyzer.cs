@@ -8,7 +8,9 @@
         {
             var manager = new FileExtensionManager();
 
-            return manager.IsValid(fileName);
+            WasLastFileNameValid = manager.IsValid(fileName);
+
+            return WasLastFileNameValid;
         }
     }
 }

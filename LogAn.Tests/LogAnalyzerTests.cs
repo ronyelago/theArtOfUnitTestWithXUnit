@@ -52,7 +52,7 @@ namespace LogAn.Tests
         }
 
         [Fact]
-        public void IsValidFileName_ValidName_RemembersTrue()
+         public void IsValidFileName_ValidName_RemembersTrue()
         {
             //arrange
             string fileName = "whatever.slf";
