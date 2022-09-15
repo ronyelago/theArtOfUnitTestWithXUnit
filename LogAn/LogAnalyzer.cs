@@ -6,7 +6,7 @@
 
         public bool IsValidLogFileName(string fileName)
         {
-            var manager = new FileExtensionManager();
+            IExtensionManager manager = new FileExtensionManager();
 
             WasLastFileNameValid = manager.IsValid(fileName);
 
