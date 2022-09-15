@@ -6,6 +6,11 @@
 
         public bool WasLastFileNameValid { get; set; }
 
+        public LogAnalyzer()
+        {
+            _manager = new FileExtensionManager();
+        }
+
         public LogAnalyzer( IExtensionManager manager)
         {
             _manager = manager;
