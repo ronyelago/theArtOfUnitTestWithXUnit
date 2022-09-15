@@ -5,10 +5,12 @@ namespace LogAn.Tests
     public class LogAnalyzerTests
     {
         private LogAnalyzer logAn;
+        private StubExtensionManager stubManager;
 
         public LogAnalyzerTests()
         {
-            logAn = new LogAnalyzer();
+            stubManager = new StubExtensionManager();
+            logAn = new LogAnalyzer(stubManager);
         }
 
         [Fact]
