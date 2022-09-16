@@ -8,21 +8,14 @@
 
         public LogAnalyzer()
         {
-            _manager = new FileExtensionManager();
-        }
-
-        public LogAnalyzer( IExtensionManager manager)
-        {
-            _manager = manager;
+            _manager = ExtensionManagerFactory.Create();
         }
 
         public bool IsValidLogFileName(string fileName)
         {
-            
-
             WasLastFileNameValid = _manager.IsValid(fileName);
 
-            return WasLastFileNameValid;
+            return WasLastFileNameValid && Path.GetFileNameWithoutExtension(fileName).Length > 5;
         }
     }
 }
