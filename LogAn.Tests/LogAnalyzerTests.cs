@@ -44,6 +44,7 @@ namespace LogAn.Tests
         {
             //arrange
             string fileName = string.Empty;
+            ExtensionManagerFactory.CustomManager = new StubExtensionManager();
 
             //act 
             Action action = () => logAn.IsValidLogFileName(fileName);
