@@ -1,6 +1,8 @@
+using Xunit;
+
 namespace Estacionamento.Testes
 {
-    public class UnitTest1
+    public class VeiculoTests
     {
         [Fact]
         public void Test1()
