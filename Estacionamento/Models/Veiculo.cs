@@ -80,7 +80,17 @@
         public DateTime HoraSaida { get; set; }
         public string Ticket { get => _ticket; set => _ticket = value; }
         public string IdTicket { get; set; }
-        public TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
+        public TipoVeiculo Tipo
+        {
+            get => _tipo;
+            set
+            {
+                if (value == null)
+                    _tipo = TipoVeiculo.Automovel;
+                else
+                    _tipo = value;
+            }
+        }
 
         //Métodos
         public void Acelerar(int tempoSeg)

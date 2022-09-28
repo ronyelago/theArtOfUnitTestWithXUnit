@@ -29,5 +29,22 @@ namespace Estacionamento.Testes
 
             Assert.Equal(-30, veiculo.VelocidadeAtual);
         }
+
+        [Fact]
+        public void TipoVeiculo_NaoDefinido_DeveRetornarAutomovel()
+        {
+            //arrange
+            var veiculo = new Veiculo();
+            //act & assert
+            Assert.Equal(TipoVeiculo.Automovel, veiculo.Tipo);
+        }
+
+        [Fact]
+        public void AlterarDadosVeiculo()
+        {
+            var veiculo = new Veiculo();
+
+            
+        }
     }
 }
