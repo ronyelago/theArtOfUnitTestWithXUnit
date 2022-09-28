@@ -17,5 +17,17 @@ namespace Estacionamento.Testes
             //assert
             Assert.Equal(100, veiculo.VelocidadeAtual);
         }
+
+        [Fact]
+        public void VeiculoFrear()
+        {
+            //arrange
+            var veiculo = new Veiculo();
+
+            //act
+            veiculo.Frear(2);
+
+            Assert.Equal(-30, veiculo.VelocidadeAtual);
+        }
     }
 }
