@@ -6,7 +6,14 @@ namespace NumberParser
     {
         static void Main(string [] args)
         {
-            Console.WriteLine("heelo boast");
+            try
+            {
+                SimpleParserTests.TestReturnsZeroWhenEmptyString();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{e.Message}; {e.InnerException?.Message}");
+            }
         }
     }
 }
