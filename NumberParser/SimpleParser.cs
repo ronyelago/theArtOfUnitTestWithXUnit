@@ -1,4 +1,6 @@
-﻿namespace NumberParser
+﻿using System;
+
+namespace NumberParser
 {
     public class SimpleParser
     {
