@@ -66,5 +66,18 @@ namespace LogAn.Tests
             //assert
             Assert.True(logAn.WasLastFileNameValid);
         }
+
+        [Fact]
+        public void IsValidFileNameOld_ValidName_ReturnsTrue()
+        {
+            //arrange
+            string fileName = "whatever.slf";
+
+            //act
+            bool isValidFileName = logAn.IsValidLogFileNameOld(fileName);
+
+            //assert
+            Assert.True(isValidFileName, "fileName should be valid!");
+        }
     }
 }
