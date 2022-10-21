@@ -2,9 +2,9 @@
 
 namespace NumberParser
 {
-    public class SimpleParser
+    public static class SimpleParser
     {
-        public int ParseAndSum(string numbers)
+        public static int ParseAndSum(string numbers)
         {
             if (numbers.Length == 0)
                 return 0;
