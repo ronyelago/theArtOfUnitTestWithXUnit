@@ -20,7 +20,10 @@
 
         public bool IsValidLogFileNameOld(string fileName)
         {
-            if (!fileName.EndsWith(".SLF"))
+            if (string.IsNullOrEmpty(fileName))
+                throw new ArgumentException("No file name provided!");
+
+            if (!fileName.ToLower().EndsWith(".slf"))
                 return false;
 
             return true;

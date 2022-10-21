@@ -68,7 +68,20 @@ namespace LogAn.Tests
         }
 
         [Fact]
-        public void IsValidFileNameOld_ValidName_ReturnsTrue()
+        public void IsValidFileNameOld_ValidFileUpperCased_ReturnsTrue()
+        {
+            //arrange
+            string fileName = "whatever.SLF";
+
+            //act
+            bool isValidFileName = logAn.IsValidLogFileNameOld(fileName);
+
+            //assert
+            Assert.True(isValidFileName, "fileName should be valid!");
+        }
+
+        [Fact]
+        public void IsValidFileNameOld_ValidFileLowerCased_ReturnsTrue()
         {
             //arrange
             string fileName = "whatever.slf";
@@ -78,6 +91,20 @@ namespace LogAn.Tests
 
             //assert
             Assert.True(isValidFileName, "fileName should be valid!");
+        }
+
+        [Fact]
+        public void IsValidFileName_EmptyFileName_ThrowsArgumentException()
+        {
+            //arrange
+            string fileName = string.Empty;
+
+            //act
+            Action action = () => logAn.IsValidLogFileNameOld(fileName);
+
+            //assert
+            var ex = Assert.Throws<ArgumentException>(action);
+            Assert.Equal("No file name provided!", ex.Message);
         }
     }
 }
