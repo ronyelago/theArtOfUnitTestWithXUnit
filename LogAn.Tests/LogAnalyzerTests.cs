@@ -14,7 +14,7 @@ namespace LogAn.Tests
         }
 
         [Fact]
-        public void IsValidLogFileName_validFile_returnsTrue()
+        public void IsValidLogFileName_ValidFile_ReturnsTrue()
         {
             //arrange
             string fileName = "jozias.SLF";
@@ -27,7 +27,7 @@ namespace LogAn.Tests
         }
 
         [Fact]
-        public void IsValidFileName_invalidFile_returnsFalse()
+        public void IsValidFileName_InvalidFile_ReturnsFalse()
         {
             //arrange
             string fileName = "munhoz.TXT";

@@ -17,5 +17,13 @@
 
             return WasLastFileNameValid && Path.GetFileNameWithoutExtension(fileName).Length > 5;
         }
+
+        public bool IsValidLogFileNameOld(string fileName)
+        {
+            if (!fileName.EndsWith(".SLF"))
+                return false;
+
+            return true;
+        }
     }
 }
