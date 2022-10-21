@@ -4,7 +4,7 @@ namespace NumberParser
 {
     public class TestUtil
     {
-        public static void ShowProblem(string test, string message)
+        public static void ShowMessage(string test, string message)
         {
             Console.WriteLine($@"---{test}---{message}---");
         }

@@ -9,7 +9,7 @@ namespace NumberParser
             try
             {
                 SimpleParserTests.TestReturnsZeroWhenEmptyString();
-                SimpleParserTests.TestReturnsNumberWWhenTheNumberIsProvided("34");
+                SimpleParserTests.TestReturnsNumberWhenTheNumberIsProvided("34");
             }
             catch (Exception e)
             {
