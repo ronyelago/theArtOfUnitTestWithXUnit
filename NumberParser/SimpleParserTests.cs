@@ -29,7 +29,7 @@ namespace NumberParser
             }
         }
 
-        public static void TestReturnsNumberWhenTheNumberIsProvided(string singleNumber)
+        public static void TestReturnsSingleNumberWhenTheNumberIsProvided(string singleNumber)
         {
             string testName = MethodBase.GetCurrentMethod().Name;
 
