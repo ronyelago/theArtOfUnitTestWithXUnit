@@ -102,7 +102,7 @@ namespace LogAn.Tests
             //act
             Action action = () => logAn.IsValidLogFileNameOld(fileName);
 
-            //assert
+            //asserts
             var ex = Assert.Throws<ArgumentException>(action);
             Assert.Equal("No file name provided!", ex.Message);
         }

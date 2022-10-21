@@ -21,6 +21,19 @@ namespace LogAn.Tests
             Assert.Equal(0, result);
         }
 
+        [Fact]
+        public void Add_CalledOnde_SavesNumberForSum()
+        {
+            //arrange
+            _calculator.Add(1);
+            
+            //act
+            int lastSum = _calculator.Sum();
+
+            //assert
+            Assert.Equal(1, lastSum);
+        }
+
         [Theory]
         [InlineData(0, 1)]
         [InlineData(1, 2)]

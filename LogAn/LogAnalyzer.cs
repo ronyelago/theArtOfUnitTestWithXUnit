@@ -20,12 +20,19 @@
 
         public bool IsValidLogFileNameOld(string fileName)
         {
+            WasLastFileNameValid = false;
+
             if (string.IsNullOrEmpty(fileName))
+            {
                 throw new ArgumentException("No file name provided!");
+            }
 
             if (!fileName.ToLower().EndsWith(".slf"))
+            {
                 return false;
+            }
 
+            WasLastFileNameValid = true;
             return true;
         }
     }
