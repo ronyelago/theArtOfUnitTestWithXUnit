@@ -94,7 +94,7 @@ namespace LogAn.Tests
         }
 
         [Fact]
-        public void IsValidFileName_EmptyFileName_ThrowsArgumentException()
+        public void IsValidFileNameOld_EmptyFileName_ThrowsArgumentException()
         {
             //arrange
             string fileName = string.Empty;
@@ -105,6 +105,19 @@ namespace LogAn.Tests
             //asserts
             var ex = Assert.Throws<ArgumentException>(action);
             Assert.Equal("No file name provided!", ex.Message);
+        }
+
+        [Fact]
+        public void IsValidFileNameOld_InvalidFileName_ReturnsFalse()
+        {
+            //arrange
+            string fileName = "wav";
+
+            //act
+            bool isValid = logAn.IsValidLogFileNameOld(fileName);
+
+            //assert
+            Assert.False(isValid);
         }
     }
 }

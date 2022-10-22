@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="validExtensions.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="validExtensions.txt" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,6 @@
-﻿namespace LogAn
+﻿using System.Reflection;
+
+namespace LogAn
 {
     public class LogAnalyzer
     {
@@ -27,13 +29,19 @@
                 throw new ArgumentException("No file name provided!");
             }
 
-            if (!fileName.ToLower().EndsWith(".slf"))
+            string contents = File.ReadAllText(@"C://projects//aout//validExtensions.txt");
+
+            foreach (var extension in contents.Split(','))
             {
-                return false;
+                if (fileName.EndsWith(extension))
+                {
+                    WasLastFileNameValid = true;
+
+                    return true;
+                }
             }
 
-            WasLastFileNameValid = true;
-            return true;
+            return false;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace LogAn.Tests
         }
 
         [Fact]
-        public void Add_CalledOnde_SavesNumberForSum()
+        public void Add_CalledOnce_SavesNumberForSum()
         {
             //arrange
             _calculator.Add(1);
