@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace LogAn
+﻿namespace LogAn
 {
     public class LogAnalyzer
     {
@@ -13,7 +11,7 @@ namespace LogAn
             _manager = ExtensionManagerFactory.Create();
         }
 
-        // in this version we extract an interface to break the dependency and meke our code more testable
+        // in this new refactored version we extract an interface to break the dependency and meke our code more testable
         public bool IsValidLogFileName(string fileName)
         {
             WasLastFileNameValid = _manager.IsValid(fileName);
