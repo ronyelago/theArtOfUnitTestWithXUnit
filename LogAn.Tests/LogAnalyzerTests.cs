@@ -9,7 +9,10 @@ namespace LogAn.Tests
 
         public LogAnalyzerTests()
         {
-            ExtensionManagerFactory.CustomManager = new StubExtensionManager();
+            var stubExtensionManager = new StubExtensionManager();
+            stubExtensionManager.ShouldExtensionBeValid = true;
+            ExtensionManagerFactory.CustomManager = stubExtensionManager;
+            
             logAn = new LogAnalyzer();
         }
 
