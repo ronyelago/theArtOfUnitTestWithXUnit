@@ -5,11 +5,11 @@ namespace LogAn.Tests
     public class LogAnalyzerTests
     {
         private LogAnalyzer logAn;
-        private StubExtensionManager stubManager;
+        private StubExtensionManager stubExtensionManager;
 
         public LogAnalyzerTests()
         {
-            var stubExtensionManager = new StubExtensionManager();
+            stubExtensionManager = new StubExtensionManager();
             stubExtensionManager.ShouldExtensionBeValid = true;
             ExtensionManagerFactory.CustomManager = stubExtensionManager;
             
@@ -58,7 +58,7 @@ namespace LogAn.Tests
         }
 
         [Fact]
-         public void IsValidFileName_ValidName_RemembersTrue()
+        public void IsValidFileName_ValidName_RemembersTrue()
         {
             //arrange
             string fileName = "whatever.slf";
@@ -70,6 +70,18 @@ namespace LogAn.Tests
             Assert.True(logAn.WasLastFileNameValid);
         }
 
+        [Fact]
+        public void IsValidFileName_NameShorterThan6CharsButSupportedExtension_ReturnsFalse()
+        {
+            // arrange and act
+            bool isValid = logAn.IsValidLogFileName("short.wsx");
+
+            // assert
+            Assert.False(isValid, "File name with less than 5 chars should have failed the method, even if the extension is supported");
+        }
+
+
+        // below tests are integration tests because they have an extarnal dependency
         [Fact]
         public void IsValidFileNameOld_ValidFileUpperCased_ReturnsTrue()
         {
