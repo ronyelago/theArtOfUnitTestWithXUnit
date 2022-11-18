@@ -1,4 +1,4 @@
-﻿namespace LogAn4
+﻿namespace LogAn4.Test
 {
     public class MockService : IWebService
     {
