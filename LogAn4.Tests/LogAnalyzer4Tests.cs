@@ -9,7 +9,7 @@ namespace LogAn4.Tests
         {
             //arrange
             var service = new MockService();
-            var log = new LogAnalyzer(service);
+            var log = new LogAnalyzer();
             var tooShortFileName = "abc.txt";
 
             //act
