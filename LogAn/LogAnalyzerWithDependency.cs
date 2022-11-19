@@ -20,7 +20,7 @@
 
             foreach (var extension in contents.Split(','))
             {
-                if (fileName.EndsWith(extension))
+                if (fileName.ToLower().EndsWith(extension))
                 {
                     WasLastFileNameValid = true;
 
