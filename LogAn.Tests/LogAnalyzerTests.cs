@@ -10,9 +10,6 @@ namespace LogAn.Tests
         public LogAnalyzerTests()
         {
             stubExtensionManager = new StubExtensionManager();
-            stubExtensionManager.ShouldExtensionBeValid = true;
-            ExtensionManagerFactory.CustomManager = stubExtensionManager;
-            
             logAn = new LogAnalyzer();
         }
 
@@ -20,6 +17,8 @@ namespace LogAn.Tests
         public void IsValidLogFileName_ValidFile_ReturnsTrue()
         {
             //arrange
+            stubExtensionManager.ShouldExtensionBeValid = true;
+            ExtensionManagerFactory.CustomManager = stubExtensionManager;
             string fileName = "jozias.SLF";
 
             //act
@@ -33,6 +32,7 @@ namespace LogAn.Tests
         public void IsValidFileName_InvalidFile_ReturnsFalse()
         {
             //arrange
+            stubExtensionManager.ShouldExtensionBeValid = false;
             string fileName = "munhoz.TXT";
 
             //act
@@ -47,7 +47,6 @@ namespace LogAn.Tests
         {
             //arrange
             string fileName = string.Empty;
-            ExtensionManagerFactory.CustomManager = new StubExtensionManager();
 
             //act 
             Action action = () => logAn.IsValidLogFileName(fileName);
